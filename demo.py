@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 import numpy as np
 from scipy.spatial.distance import pdist, squareform
-from scipy.linalg import pinv, norm
+from scipy.linalg import inv, norm
 
 import sampler.mcdvs as dvs
 import sampler.utils as utils

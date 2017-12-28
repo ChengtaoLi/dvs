@@ -4,9 +4,12 @@ This repository includes sampling methods for *Dual Volume Sampling* (*DVS*s). I
 
 ## Prerequisites
 * `Python 2.7`
-* `PyTorch >= 0.2`
 * `numpy`
 * `scipy`
 * `matplotlib`
 
 ---
+
+## Demo on Experimental Design
+
+![](fig/expdesign.png)

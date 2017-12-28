@@ -39,7 +39,7 @@ for run_id in xrange(5):
 
 		X_hat = X[np.ix_(dvs_smpl, range(X.shape[1]))]
 		Y_hat = Y[np.ix_(dvs_smpl)]
-		beta_hat = pinv(X_hat.transpose().dot(X_hat) + 1e-5*np.identity(X.shape[1])).dot(X_hat.transpose()).dot(Y_hat)
+		beta_hat = inv(X_hat.transpose().dot(X_hat) + 1e-5*np.identity(X.shape[1])).dot(X_hat.transpose()).dot(Y_hat)
 		error_dvs[k_idx] += norm(beta_hat - beta_ref)
 
 

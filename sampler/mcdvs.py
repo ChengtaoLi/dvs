@@ -21,7 +21,7 @@ def sample(X, mix_step, k, beta=1, init_rst=None):
 
     epseye = 0.001 * np.identity(n)
 
-    C_mat = np.copy(X[np.ix_(range(X.shape[0]), rst)])
+    C_mat = X[np.ix_(range(X.shape[0]), rst)]
     M = C_mat.dot(C_mat.transpose()) + epseye
     M_det = sp.linalg.det(M)**beta
 
@@ -35,7 +35,7 @@ def sample(X, mix_step, k, beta=1, init_rst=None):
 
         rst_new = np.copy(rst)
         rst_new[rem_ind] = u
-        C_mat_new = np.copy(X[np.ix_(range(X.shape[0]), rst_new)])
+        C_mat_new = X[np.ix_(range(X.shape[0]), rst_new)]
         update_det = sp.linalg.det(C_mat_new.dot(C_mat_new.transpose()) + epseye)**beta
 
         flag = np.random.uniform() < (update_det / M_det)

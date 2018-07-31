@@ -7,9 +7,6 @@ This repository includes sampling methods for *Dual Volume Sampling* (*DVS*s). I
 * `numpy`
 * `scipy`
 * `matplotlib`
+* `Matlab`
 
 ---
-
-## Demo on Experimental Design
-
-![](fig/expdesign.png)
